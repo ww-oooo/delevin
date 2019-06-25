@@ -1,4 +1,20 @@
-1》git branch <分支名>： 首先使用 git branch bugfix01，在当前分支也就是master分支上创建了一个名为bugfix01的新分支。
-2》git checkout <分支名> : 然后使用 git checkout bugfix01 命令来切换到我们新创建的bugfix01的新分支上。
+1》git branch <分支名>： 使用 git branch bugfix01，在当前分支也就是master分支上创建了一个名为bugfix01的新分支。
+2》git checkout <分支名> : 使用 git checkout bugfix01 命令来切换到我们新创建的bugfix01的新分支上。
+	git checkout -b <分支名> : checkout 命令加上-b 选项 可同时完成创建新分支和切换到该分支上。
 3》git add . 在执行commit之前，选择先git add。
+	git add . ：他会监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。
+	git add -u ：他仅监控已经被add的文件（即tracked file），他会将被修改的文件提交到暂存区。add -u 不会提交新文件（untracked file）。（git add --update的缩写）
+    git add -A ：是上面两个功能的合集（git add --all的缩写）
+	git add 文件夹
 4》git commit -m "获取所有主题及热度的文章 接口调试"。
+5》git remote add origin <远程仓库地址> Github上创建好的Git仓库和本地仓库进行关联。
+6》git stash 能够将所有未提交的修改（工作区和暂存区）保存至堆栈中，用于后续恢复当前工作目录。
+	git stash save 作用等同于git stash，区别是可以加一些注释，如下：git stash save “注释”
+	git stash list 查看当前stash中的内容
+	git stash pop 将当前stash中的内容弹出，并应用到当前分支对应的工作目录上 该命令将堆栈中最近保存的内容删除（栈是先进后出）
+	git stash apply 将堆栈中的内容应用到当前目录，不同于git stash pop，该命令不会将内容从堆栈中删除，也就说该命令能够将堆栈的内容多次应用到工作目录中，适应于多个分支的情况。
+	git stash drop <名称> 从堆栈中移除某个指定的stash
+	git stash clear 清除堆栈中的所有 内容
+	git stash show 查看堆栈中最新保存的stash和当前目录的差异
+	git stash branch 从最新的stash创建分支
+    
