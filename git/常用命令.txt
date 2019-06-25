@@ -1,0 +1,4 @@
+1》git branch <分支名>： 首先使用 git branch bugfix01，在当前分支也就是master分支上创建了一个名为bugfix01的新分支。
+2》git checkout <分支名> : 然后使用 git checkout bugfix01 命令来切换到我们新创建的bugfix01的新分支上。
+3》git add . 在执行commit之前，选择先git add。
+4》git commit -m "获取所有主题及热度的文章 接口调试"。
