@@ -1,4 +1,4 @@
-1》git branch <分支名>： 使用 git branch bugfix01，在当前分支也就是master分支上创建了一个名为bugfix01的新分支。
+﻿1》git branch <分支名>： 使用 git branch bugfix01，在当前分支也就是master分支上创建了一个名为bugfix01的新分支。
 2》git checkout <分支名> : 使用 git checkout bugfix01 命令来切换到我们新创建的bugfix01的新分支上。
 	git checkout -b <分支名> : checkout 命令加上-b 选项 可同时完成创建新分支和切换到该分支上。
 3》git add . 在执行commit之前，选择先git add。
@@ -17,4 +17,5 @@
 	git stash clear 清除堆栈中的所有 内容
 	git stash show 查看堆栈中最新保存的stash和当前目录的差异
 	git stash branch 从最新的stash创建分支
+7》第一次推送代码 git push -u origin master
     
